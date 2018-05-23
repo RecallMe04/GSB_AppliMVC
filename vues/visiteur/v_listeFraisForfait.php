@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 /**
  * (Visiteur) Vue Liste des frais au forfait
  *
@@ -32,6 +32,7 @@
                     <div class="form-group">
                         <label>
                             <?php echo htmlspecialchars($libelle) ?></label>
+                        <!--suppress HtmlFormInputWithoutLabel -->
                         <input type="text"
                                name="lesFrais[<?php echo htmlspecialchars($idFrais) ?>]"
                                size="10" maxlength="5"

@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 /**
  * (Comptable) Vue Liste des visiteurs
  *
