@@ -20,7 +20,9 @@ case 'saisieVisiteur' :
     include 'vues/comptable/v_validerListeVisiteurs.php';
     break;
 case 'saisieMois' :
-    $leVisiteur = filter_input(INPUT_POST, 'lstVisiteur', FILTER_SANITIZE_STRING);
+    $leVisiteur = filter_input(
+        INPUT_POST, 'lstVisiteur', FILTER_SANITIZE_STRING
+    );
     $visiteurASelectionner = $leVisiteur;
     $lesMois = $pdo->getToutLesMoisClotures($leVisiteur);
     if ($lesMois == null) {
@@ -103,14 +105,16 @@ case 'modifierFraisHF':
             . '&idMois=' . $leMois
             . '&mode=modifierFraisHF'
         );
-    } else if ($demande == "report") {
-        $pdo->reportFraisHorsForfait($leFraisHF);
-        header(
-            'Location: index.php?uc=validerFrais&action=afficherFrais'
-            . '&idVisiteur=' . $leVisiteur
-            . '&idMois=' . $leMois
-            . '&mode=modifierFraisHF'
-        );
+    } else {
+        if ($demande == "report") {
+            $pdo->reportFraisHorsForfait($leFraisHF);
+            header(
+                'Location: index.php?uc=validerFrais&action=afficherFrais'
+                . '&idVisiteur=' . $leVisiteur
+                . '&idMois=' . $leMois
+                . '&mode=modifierFraisHF'
+            );
+        }
     }
     break;
 case 'validerFrais':

@@ -16,7 +16,8 @@
 deconnecter();
 ?>
     <div class="alert alert-info" role="alert">
-        <p>Vous avez bien &eacute;t&eacute; d&eacute;connect&eacute; ! <a href="index.php">Cliquez ici</a>
+        <p>Vous avez bien &eacute;t&eacute; d&eacute;connect&eacute; ! <a
+                    href="index.php">Cliquez ici</a>
             pour revenir &agrave; la page de connexion.</p>
     </div>
 <?php

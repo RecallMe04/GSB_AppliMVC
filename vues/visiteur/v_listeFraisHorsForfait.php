@@ -17,7 +17,9 @@
 <hr>
 <div class="row">
     <div class="panel panel-info">
-        <div class="panel-heading">Descriptif des &eacute;l&eacute;ments hors forfait</div>
+        <div class="panel-heading">Descriptif des &eacute;l&eacute;ments hors
+            forfait
+        </div>
         <table class="table table-bordered table-responsive">
             <thead>
             <tr>
@@ -39,8 +41,12 @@
                     <td> <?php echo htmlspecialchars($date) ?></td>
                     <td> <?php echo htmlspecialchars($libelle) ?></td>
                     <td><?php echo htmlspecialchars($montant) ?></td>
-                    <td><a href="index.php?uc=gererFrais&action=supprimerFrais&idFrais=<?php echo htmlspecialchars($id) ?>"
-                           onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Supprimer ce frais</a>
+                    <td>
+                        <a href="index.php?uc=gererFrais&action=supprimerFrais&idFrais=<?php echo htmlspecialchars(
+                            $id
+                        ) ?>"
+                           onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Supprimer
+                            ce frais</a>
                     </td>
                 </tr>
                 <?php

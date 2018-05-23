@@ -16,12 +16,14 @@
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-        <div style="text-align: center;"><h3>S&eacute;lectionner un visiteur</h3></div>
+        <div style="text-align: center;"><h3>S&eacute;lectionner un
+                visiteur</h3></div>
         <form action="index.php?uc=suiviFrais&action=saisieMois"
               method="post">
             <div class="form-group">
                 <label for="lstVisiteur" accesskey="n"></label>
-                <select id="lstVisiteur" name="lstVisiteur" class="form-control">
+                <select id="lstVisiteur" name="lstVisiteur"
+                        class="form-control">
                     <?php
                     foreach ($lesVisiteur as $unVisiteur) {
                         $visiteur = $unVisiteur['id'];
@@ -49,7 +51,9 @@
                 </select>
             </div>
             <div style="text-align: center;"><input type="submit"
-             value="Valider" class="btn btn-success"></div>
+                                                    value="Valider"
+                                                    class="btn btn-success">
+            </div>
         </form>
     </div>
 </div>

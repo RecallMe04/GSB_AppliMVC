@@ -22,7 +22,8 @@
               method="post">
             <div class="form-group">
                 <label for="lstVisiteur" accesskey="n"></label>
-                <select id="lstVisiteur" name="lstVisiteur" class="form-control">
+                <select id="lstVisiteur" name="lstVisiteur"
+                        class="form-control">
                     <?php
                     foreach ($lesVisiteur as $unVisiteur) {
                         $visiteur = $unVisiteur['id'];
@@ -50,7 +51,9 @@
                 </select>
             </div>
             <div style="text-align: center;"><input type="submit"
-                                    value="Valider" class="btn btn-success"></div>
+                                                    value="Valider"
+                                                    class="btn btn-success">
+            </div>
         </form>
     </div>
 </div>

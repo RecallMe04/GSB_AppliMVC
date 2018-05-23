@@ -54,7 +54,8 @@
     </table>
 </div>
 <div class="panel panel-info">
-    <div class="panel-heading">Descriptif des &eacute;l&eacute;ments hors forfait -
+    <div class="panel-heading">Descriptif des &eacute;l&eacute;ments hors
+        forfait -
         <?php echo htmlspecialchars($nbJustificatifs) ?> justificatifs re&ccedil;us
     </div>
     <table class="table table-bordered table-responsive">

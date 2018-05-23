@@ -54,7 +54,8 @@
     </table>
 </div>
 <div class="panel panel-info">
-    <div class="panel-heading">Descriptif des &eacute;l&eacute;ments hors forfait -
+    <div class="panel-heading">Descriptif des &eacute;l&eacute;ments hors
+        forfait -
         <?php echo htmlspecialchars($nbJustificatifs) ?> justificatifs re&ccedil;us
     </div>
     <table class="table table-bordered table-responsive">
@@ -81,18 +82,26 @@
 </div>
 <div class="row">
     <div class="col-md-8">
-        <form action="index.php?uc=suiviFrais&action=changerEtatFrais&idVisiteur=<?php echo htmlspecialchars($leVisiteur) ?>&idMois=<?php echo htmlspecialchars($leMois) ?>&demande=paiement"
+        <form action="index.php?uc=suiviFrais&action=changerEtatFrais&idVisiteur=<?php echo htmlspecialchars(
+            $leVisiteur
+        ) ?>&idMois=<?php echo htmlspecialchars($leMois) ?>&demande=paiement"
               method="post">
             <div style="text-align: center;"><input type="submit"
-             class="btn btn-success" value="Mettre en paiement"/>
+                                                    class="btn btn-success"
+                                                    value="Mettre en paiement"/>
             </div>
         </form>
     </div>
     <div class="col-md-1">
-        <form action="index.php?uc=suiviFrais&action=changerEtatFrais&idVisiteur=<?php echo htmlspecialchars($leVisiteur) ?>&idMois=<?php echo htmlspecialchars($leMois) ?>&demande=remboursement"
+        <form action="index.php?uc=suiviFrais&action=changerEtatFrais&idVisiteur=<?php echo htmlspecialchars(
+            $leVisiteur
+        ) ?>&idMois=<?php echo htmlspecialchars(
+            $leMois
+        ) ?>&demande=remboursement"
               method="post">
             <div style="text-align: center;"><input type="submit"
-             class="btn btn-success" value="Pay&eacute;e"/></div>
+                                                    class="btn btn-success"
+                                                    value="Pay&eacute;e"/></div>
         </form>
     </div>
 </div>

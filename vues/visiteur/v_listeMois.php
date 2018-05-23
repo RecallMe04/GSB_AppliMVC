@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection ALL */
 /**
  * (Visiteur) Vue Liste des mois
  *
@@ -35,13 +35,19 @@
                             <option selected value=
                             "<?php echo htmlspecialchars($mois) ?>">
                                 <?php echo htmlspecialchars($numMois)
-                                    . '/' . htmlspecialchars($numAnnee) ?> </option>
+                                    . '/' . htmlspecialchars(
+                                        $numAnnee
+                                    ) ?> </option>
                             <?php
                         } else {
                             ?>
-                            <option value="<?php echo htmlspecialchars($mois) ?>">
+                            <option value="<?php echo htmlspecialchars(
+                                $mois
+                            ) ?>">
                                 <?php echo htmlspecialchars($numMois)
-                                    . '/' . htmlspecialchars($numAnnee) ?> </option>
+                                    . '/' . htmlspecialchars(
+                                        $numAnnee
+                                    ) ?> </option>
                             <?php
                         }
                     }

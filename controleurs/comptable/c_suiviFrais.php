@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpCSValidationInspection */
 
 /**
  * (Comptable) Gestion du suivi des frais
@@ -20,7 +20,9 @@ case 'saisieVisiteur' :
     include 'vues/comptable/v_suiviListeVisiteurs.php';
     break;
 case 'saisieMois' :
-    $leVisiteur = filter_input(INPUT_POST, 'lstVisiteur', FILTER_SANITIZE_STRING);
+    $leVisiteur = filter_input(
+        INPUT_POST, 'lstVisiteur', FILTER_SANITIZE_STRING
+    );
     $visiteurASelectionner = $leVisiteur;
     $lesMois = $pdo->getToutLesMoisValidees($leVisiteur);
     if ($lesMois == null) {
@@ -34,7 +36,9 @@ case 'saisieMois' :
     break;
 case 'afficherFrais' :
     $leVisiteur = filter_input(INPUT_GET, 'idVisiteur', FILTER_SANITIZE_STRING);
-    if ((filter_input(INPUT_GET, 'mode', FILTER_SANITIZE_STRING)) == 'etatModifie') {
+    if ((filter_input(INPUT_GET, 'mode', FILTER_SANITIZE_STRING))
+        == 'etatModifie'
+    ) {
         $leMois = filter_input(INPUT_GET, 'idMois', FILTER_SANITIZE_STRING);
     } else {
         $leMois = filter_input(INPUT_POST, 'lstMois', FILTER_SANITIZE_STRING);

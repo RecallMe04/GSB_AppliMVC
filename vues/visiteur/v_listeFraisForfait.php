@@ -16,7 +16,9 @@
 ?>
 <div class="row">
     <h2>Renseigner ma fiche de frais du mois
-        <?php echo htmlspecialchars($numMois) . '-' . htmlspecialchars($numAnnee) ?>
+        <?php echo htmlspecialchars($numMois) . '-' . htmlspecialchars(
+                $numAnnee
+            ) ?>
     </h2>
     <h3>El&eacute;ments forfaitis&eacute;s</h3>
     <div class="col-md-4">
@@ -34,7 +36,9 @@
                             <?php echo htmlspecialchars($libelle) ?></label>
                         <!--suppress HtmlFormInputWithoutLabel -->
                         <input type="text"
-                               name="lesFrais[<?php echo htmlspecialchars($idFrais) ?>]"
+                               name="lesFrais[<?php echo htmlspecialchars(
+                                   $idFrais
+                               ) ?>]"
                                size="10" maxlength="5"
                                value="<?php echo htmlspecialchars($quantite) ?>"
                                class="form-control">
