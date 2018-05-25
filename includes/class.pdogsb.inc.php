@@ -44,19 +44,19 @@
 class PdoGsb
 {
 
-    //private static $_serveur = 'mysql:host=localhost';
-    //private static $_bdd = 'dbname=gsb_frais';
-    //private static $_user = 'userGsb';
-    //private static $_mdp = '!@Secret@!123';
-    //private static $_monPdo;
-    //private static $_monPdoGsb = null;
-
-    private static $_serveur = 'mysql:host=db737425363.db.1and1.com';
-    private static $_bdd = 'dbname=db737425363';
-    private static $_user = 'dbo737425363';
+    private static $_serveur = 'mysql:host=localhost';
+    private static $_bdd = 'dbname=gsb_frais';
+    private static $_user = 'userGsb';
     private static $_mdp = '!@Secret@!123';
     private static $_monPdo;
     private static $_monPdoGsb = null;
+
+    //private static $_serveur = 'mysql:host=db737425363.db.1and1.com';
+    //private static $_bdd = 'dbname=db737425363';
+    //private static $_user = 'dbo737425363';
+    //private static $_mdp = '!@Secret@!123';
+    //private static $_monPdo;
+    //private static $_monPdoGsb = null;
 
     /**
      * Constructeur privé, crée l'instance de PDO qui sera sollicitée
@@ -1156,7 +1156,7 @@ class PdoGsb
         if (strlen($libelleRefus) > 100) {
             $taille = strlen($libelleRefus);
             $taille -= 100;
-            $libelle = substr($libelleRefus, 0, $taille);
+            $libelle = substr($libelleRefus, 0, -$taille);
         } else {
             $libelle = $libelleRefus;
         }
